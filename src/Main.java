@@ -13,12 +13,13 @@ public class Main {
 
         while (true) {
 
-            controllerScroll.update();
             controllerDisplay.draw(controllerScroll.getOutput());
 
             Thread.sleep(sleepTime);
 
             controllerDisplay.blank();
+
+            controllerScroll.update();
 
         }
 
@@ -27,8 +28,10 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
         int screenWidth = 8;
-        int speed = 2;
-        String message = "AND Coding Challenge!";
+        int speed = 1;
+        String message = "[B][C:R]AND[/C:R][/B] Coding Challenge [C:B]2023/3[/C:B] - [B][U]Text [C:G]in[/C:G] Transit[/U][/B]";
+
+        // 4 2 "[B]My[/B] [U]N[/U][B]A[/B][U]M[/U][B]E[/B] [C:R]is[/C:R] [B][C:G][U]Je[/C:G][C:B]ff[/U][/C:B][/B]"
 
         switch (args.length) {
 

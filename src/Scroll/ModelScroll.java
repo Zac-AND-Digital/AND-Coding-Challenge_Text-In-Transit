@@ -1,5 +1,7 @@
 package Scroll;
 
+import java.util.Arrays;
+
 class ModelScroll {
 
     private final String[] scroller;
@@ -7,14 +9,25 @@ class ModelScroll {
 
     ModelScroll(String message, int screenWidth) {
 
-        message = message.trim().replaceAll(" +", " ");
+        ModelParse modelParse = new ModelParse();
 
-        this.scroller = new String[screenWidth + message.length() + 1];
-        for (int i = 0; i < screenWidth; i++) this.scroller[i] = "";
-        System.arraycopy(message.split(""), 0, scroller, screenWidth, message.length());
+        message = message.trim().replaceAll(" +", " ");
+        String[] messageSplit = message.split(" ");
+
+        for (int i = 0; i < messageSplit.length; i++) {
+            messageSplit[i] = modelParse.parse(messageSplit[i]);
+            messageSplit[i] = messageSplit[i] + " ";
+        }
+
+        this.scroller = new String[messageSplit.length + 1];
+        System.arraycopy(messageSplit, 0, this.scroller, 0, messageSplit.length);
+        this.scroller[scroller.length - 1] = ". . . ";
 
         this.output = new String[screenWidth];
-        for (int i = 0; i < output.length; i++) this.output[i] = "";
+        for (int i = 0; i < screenWidth; i++) {
+            if (i < scroller.length - 1) this.output[i] = scroller[i];
+            else this.output[i] = "";
+        }
 
     }
 
@@ -22,12 +35,19 @@ class ModelScroll {
 
     void update() {
 
+        String wrapValue = "";
+
         for (int i = 0; i < scroller.length - 1; i++) {
-            this.scroller[i] = this.scroller[i + 1];
-            this.scroller[scroller.length - 1] = scroller[0];
+            if (i == 0) wrapValue = scroller[0];
+            this.scroller[i] = scroller[i + 1];
         }
 
-        System.arraycopy(this.scroller, 0, this.output, 0, output.length);
+        this.scroller[scroller.length - 1] = wrapValue;
+
+        for (int i = 0; i < output.length; i++) {
+            if (i == scroller.length - 1) break;
+            this.output[i] = scroller[i];
+        }
 
     }
 

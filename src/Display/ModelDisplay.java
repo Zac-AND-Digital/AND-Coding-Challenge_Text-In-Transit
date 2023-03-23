@@ -6,14 +6,14 @@ class ModelDisplay {
 
     void draw(String[] output) {
 
-        System.out.print("[");
+        System.out.print(" [ ");
 
         for (String item : output) {
-            if (item.equals("") || item.equals(" ")) System.out.print(".");
+            if (item.equals("")) System.out.print(" ");
             else System.out.print(item);
         }
 
-        System.out.print("]");
+        System.out.print("] ");
 
     }
 
