@@ -1,7 +1,5 @@
 package Scroll;
 
-import java.util.Arrays;
-
 class ModelScroll {
 
     private final String[] scroller;
