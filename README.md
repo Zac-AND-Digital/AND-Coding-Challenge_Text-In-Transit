@@ -8,14 +8,14 @@ Implementation of the Text in Transit challenge as part of AND's 2023 coding cha
 <b>Requirements</b>
 
 1. Java >= 11
-2. An OS/Terminal capable of displaying ANSI Codes. Linux and MacOS should work fine, Windows may be unreliable
+2. An OS/Terminal capable of displaying ANSI Codes. Linux and MacOS should work fine, Windows may be unreliable.
 
 ---
 
 <b>Running (Default)</b>
 
-1. Extract `AND-Coding-Challenge_Text-In-Transit.zip`
-2. In a terminal, navigate inside the new `AND-Coding-Challenge_Text-In-Transit` folder
+1. Download `AND-Coding-Challenge_Text-In-Transit.jar` from the releases page.
+2. In a terminal, navigate inside the folder where it downloaded to.
 3. Type `java -jar AND-Coding-Challenge_Text-In-Transit.jar` for the default output.
 
 ---
