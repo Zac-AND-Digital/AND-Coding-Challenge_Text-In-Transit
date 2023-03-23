@@ -8,7 +8,7 @@ Implementation of the Text in Transit challenge as part of AND's 2023 coding cha
 <b>Requirements</b>
 
 1. Java >= 11
-2. An OS/Terminal capable of displaying ANSI Codes. Linux and MacOS should work fine, Windows may be unreliable.
+2. An OS/Terminal capable of displaying ANSI Codes. <b>Linux and MacOS should work fine, Windows most likely won't work!</b>.
 
 ---
 
