@@ -14,6 +14,8 @@ Implementation of the Text in Transit challenge as part of AND's 2023 coding cha
 
 <b>Running (Default)</b>
 
+<b>Note: Due to the differences between terminals, OS's and ANSI oddness you might get extra characters in the outputs etc!</b>
+
 1. Download `AND-Coding-Challenge_Text-In-Transit.jar` from the releases page.
 2. In a terminal, navigate inside the folder where it downloaded to.
 3. Type `java -jar AND-Coding-Challenge_Text-In-Transit.jar` for the default output.
